@@ -1,0 +1,128 @@
+/* Product.css dosyanı bu şekilde güncelleyebilirsin */
+.card {
+    width: 260px; /* Biraz genişlettik daha ferah dursun */
+    height: 440px;
+    background-color: #fff;
+    border-radius: 12px; /* Köşeleri biraz daha yuvarladık */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Çok hafif, modern bir gölge */
+    margin: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee; /* Hafif bir çerçeve */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Üzerine gelince hafifçe yukarı kalksın */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Resim çerçeveye sığsın ama bozulmasın */
+    margin-bottom: 10px;
+}
+
+.title-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #333;
+    height: 45px;
+    overflow: hidden; /* Çok uzun başlıklar taşmasın */
+}
+
+.price-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #b94c4c; /* Senin kullandığın kırmızı tonu */
+    margin: 10px 0;
+}
+
+.detail-button {
+    width: 100%;
+    border: 1.5px solid #b94c4c;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #b94c4c;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.detail-button:hover {
+    background-color: #b94c4c;
+    color: #fff;
+}
+/* Product.css içine ekle */
+
+.add-to-cart-btn {
+    width: 100%;
+    flex: 1;
+    background-color: #b94c4c !important; /* Senin kırmızı tonun */
+    color: white !important;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+.add-to-cart-btn:hover {
+    background-color: #a33b3b !important; /* Üzerine gelince biraz koyulaşsın */
+    transform: scale(1.05); /* Çok hafif büyüsün */
+}
+
+.add-to-cart-btn:active {
+    transform: scale(0.95); /* Tıklandığında içeri basılma efekti */
+}
+/* Product.css içine ekle veya var olanı güncelle */
+.product-card-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Butonlar arasındaki boşluk */
+    width: 100%;
+    padding: 10px;
+}
+
+.action-btn {
+    flex: 1; /* Her iki butonun genişliğini eşit dağıtır */
+    height: 45px; /* Yükseklikleri burada sabitledik */
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Yazıların alt satıra geçmesini engeller */
+}
+
+/* İncele butonu için özel renk */
+.btn-detail {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Sepete Ekle butonu için özel renk */
+.btn-add {
+    background-color: #b94c4c !important;
+    color: white !important;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}

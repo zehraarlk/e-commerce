@@ -1,0 +1,163 @@
+* {
+    font-family: 'Poppins', sans-serif; /* Tüm siteye modern fontu tanımladık */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdfdfd; /* Tam beyaz yerine gözü yormayan çok hafif gri */
+    color: #333;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container {
+    max-width: 1300px;
+    margin: 0 auto; /* Sayfayı ortalar */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Header, Content ve Footer arası eşit boşluk */
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#root {
+    height: 100vh;
+}
+
+.drawer {
+    width: 500px !important;
+
+}
+/* Product Details Modern Tasarım */
+.details-container {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    margin-top: 50px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    align-items: center;
+}
+
+.details-image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.details-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply; /* Resim arka planı beyazsa mükemmel durur */
+}
+
+.details-content-section {
+    flex: 1.2;
+}
+
+.details-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.details-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.details-price {
+    font-size: 42px;
+    font-weight: 700;
+    color: #b94c4c;
+    margin-bottom: 30px;
+}
+
+.details-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.quantity-picker {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px 15px;
+    border-radius: 12px;
+}
+
+.quantity-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #444;
+    transition: color 0.2s;
+}
+
+.quantity-icon:hover {
+    color: #b94c4c;
+}
+
+.quantity-number {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 20px;
+    min-width: 25px;
+    text-align: center;
+}
+
+.add-basket-button {
+    flex: 1;
+    max-width: 250px;
+    padding: 18px;
+    background-color: #b94c4c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+.add-basket-button:hover {
+    background-color: #a33b3b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(185, 76, 76, 0.3);
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .details-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .details-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
